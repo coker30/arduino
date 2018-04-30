@@ -32,6 +32,11 @@ void setup()
   pinMode(led2,OUTPUT);
   pinMode(led3,OUTPUT);
   pinMode(led4,OUTPUT);
+      
+      digitalWrite(led1, LOW);
+      digitalWrite(led2, LOW);
+      digitalWrite(led3, LOW);
+      digitalWrite(led4, LOW);
 }
 
 void loop() {
@@ -46,61 +51,34 @@ void loop() {
     {
      
     digitalWrite(led1,HIGH);
+    delay(10);
+    digitalWrite(led1,LOW);
    
     }
-   if(My_Decoder.value==apagar1) 
-    { 
-    digitalWrite(led1,LOW);
+    if (My_decoder.value==prender2);
+    {
+     digitalWrite(led2,HIGH);
+      delay(10);
+      digitalWrite(led2,LOW);
+      
     }
-    ////////////////////////////////////////////////////////////////////////
-    if(My_Decoder.value==prender2) //codigo de l contorl sin declarar
-    { 
-    digitalWrite(led2,HIGH);
     
+        if (My_decoder.value==prender3);
+    {
+     digitalWrite(led3,HIGH);
+      delay(10);
+      digitalWrite(led3,LOW);
+      
     }
-     if(My_Decoder.value==apagar2) //codigo de l contorl sin declarar
-    { 
-    digitalWrite(led2,LOW);
-    
+
+    if (My_decoder.value==prender4);
+    {
+     digitalWrite(led4,HIGH);
+      delay(10);
+      digitalWrite(led4,LOW);
+      
     }
-    ////////////////////////////////////////////////////////////////////////////
-     if(My_Decoder.value==prender3) //codigo de l contorl sin declarar
-    { 
-    digitalWrite(led3,HIGH);
-    
-    }
-     if(My_Decoder.value==apagar3) //codigo de l contorl sin declarar
-    { 
-    digitalWrite(led3,LOW);
-    
-    }
-   /////////////////////////////////////////////////////////////////////////////
-     if(My_Decoder.value==prender4) //codigo de l contorl sin declarar
-    { 
-    digitalWrite(led4,HIGH);
-    
-    }
-     if(My_Decoder.value==apagar4) //codigo de l contorl sin declarar
-    { 
-    digitalWrite(led4,LOW);
-    
-    }
-    ///////////////////////////////////////////////////////////////////////////////
-     if(My_Decoder.value==offall) //codigo de l contorl sin declarar
-    { 
-    digitalWrite(led1,LOW);
-    digitalWrite(led2,LOW);
-    digitalWrite(led3,LOW);
-    digitalWrite(led4,LOW);
-    
-    }
-     if(My_Decoder.value==onall) //codigo de l contorl sin declarar
-    { 
-    digitalWrite(led1,HIGH);
-    digitalWrite(led2,HIGH);
-    digitalWrite(led3,HIGH);
-    digitalWrite(led4,HIGH);    
-    }
+
     ///////////////////////////////////////////////////////////////////////////////
   }
 }
